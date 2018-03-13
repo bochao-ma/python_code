@@ -15,10 +15,9 @@ def find_charset(html):
     return charset
 
 
-def spider(url, pattern):
+def html_content(url):
     """
     :param url:  爬取地址
-    :param pattern: 爬取规则
     :return: 爬取内容
     """
     # 写入User Agent信息
@@ -32,5 +31,6 @@ def spider(url, pattern):
     # 获取网页的编码格式（charset）
     coding_type = find_charset(str(html))
     content = html.decode(coding_type)
-    item_list = pattern.findall(content)
-    return item_list
+    return content
+    # 根据规则查找
+    # item_list = pattern.findall(content)
