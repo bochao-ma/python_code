@@ -15,10 +15,11 @@ def find_charset(html):
     return charset
 
 
-def load_page(url):
+def spider(url, pattern):
     """
-    :param url: 爬取页面的网址
-    :return: 网页的全部内容
+    :param url:  爬取地址
+    :param pattern: 爬取规则
+    :return: 爬取内容
     """
     # 写入User Agent信息
     header = {}
@@ -31,4 +32,5 @@ def load_page(url):
     # 获取网页的编码格式（charset）
     coding_type = find_charset(str(html))
     content = html.decode(coding_type)
-    return content
+    item_list = pattern.findall(content)
+    return item_list
