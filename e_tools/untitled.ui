@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>310</width>
+    <height>257</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>快捷工具</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>251</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>点击打开应用</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>231</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" alignment="Qt::AlignHCenter|Qt::AlignTop">
+       <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>75</width>
+          <height>23</height>
+         </size>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>百度云</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>软媒软件管家</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>360软件管家</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>软媒垃圾清理</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>软件卸载</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter">
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="text">
+         <string>360DNS优选</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>baiduyun()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>17</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>soft360()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>288</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ruanmeisoft()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>12</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ruanmeilaji()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>176</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>293</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>softdelete()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>13</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>dns360()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>295</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>baiduyun()</slot>
+  <slot>soft360()</slot>
+  <slot>ruanmeisoft()</slot>
+  <slot>dns360()</slot>
+  <slot>softdelete()</slot>
+  <slot>ruanmeilaji()</slot>
+ </slots>
+</ui>
